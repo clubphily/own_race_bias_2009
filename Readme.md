@@ -15,6 +15,6 @@ An [OpenCV](https://opencv.org) [script](sort/main.cpp) was used to detect the f
 
 For calculating the intermediate frames of the morphing sequence a small [command line tool](https://code.google.com/archive/p/optflow/) was used. It included a morphing algorithm based on [Proesmans' optical flow algorithm](https://link.springer.com/chapter/10.1007/BFb0028362). This algorithm worked better with the low image quality than [OpenCV based morphing](morph/main.cpp).
 
-The calculated frames where then used to generate an [video file](movie/outputfile.mkv) with [ffmpeg](http://ffmpeg.org).
+The calculated frames where then used to generate a [video file](movie/outputfile.mkv) with [ffmpeg](http://ffmpeg.org).
 
 It was a conscious decision to not interfere with the mechanical sorting and merging of the faces in the photographs. False negatives and positives were an accepted outcome. Photographs, which did not trigger a detection of a face and eyes where mechanically sorted out. Photographs were face and eyes were detected outside of their actual position were mechanically kept in the process and lead to morphing errors in the output.
